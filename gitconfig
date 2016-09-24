@@ -1,0 +1,5 @@
+[user]
+	name = Michael Chan
+	email = mijoch@gmail.com
+[credential]
+	helper = osxkeychain
