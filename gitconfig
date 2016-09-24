@@ -3,3 +3,5 @@
 	email = mijoch@gmail.com
 [credential]
 	helper = osxkeychain
+[ui]
+	color = auto
