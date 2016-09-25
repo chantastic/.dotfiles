@@ -7,3 +7,7 @@
 
 (setq package-enable-at-startup nil)
 (package-initialize)
+
+;;; custom.el
+(setq custom-file "~/.custom.el")
+(load custom-file)
