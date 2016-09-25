@@ -28,3 +28,13 @@
 ;;; evil-surround
 (require 'evil-surround)
 (global-evil-surround-mode 1)
+
+;;; helm
+(require 'helm)
+(require 'helm-config)
+(helm-mode 1)
+
+;;; projectile / projectile-helm
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
