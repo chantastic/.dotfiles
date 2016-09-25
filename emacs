@@ -20,3 +20,7 @@
 
 ;; auto-save: off
 (setq auto-save-default nil)
+
+;;; evil
+(require 'evil)
+(evil-mode t)
