@@ -24,3 +24,7 @@
 ;;; evil
 (require 'evil)
 (evil-mode t)
+
+;;; evil-surround
+(require 'evil-surround)
+(global-evil-surround-mode 1)
