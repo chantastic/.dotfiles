@@ -5,3 +5,9 @@ done
 
 # aliases
 source ~/.aliases
+
+# pco
+eval "$(~/code/pco/bin/pco init -)"
+
+# pco-box
+eval "$(pco box alias)"
