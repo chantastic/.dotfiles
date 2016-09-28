@@ -21,6 +21,21 @@
 ;; auto-save: off
 (setq auto-save-default nil)
 
+;; whitespace-mode
+;; http://stackoverflow.com/questions/6378831/emacs-globally-enable-whitespace-mode
+(global-whitespace-mode 1)
+
+;; http://ergoemacs.org/emacs/whitespace-mode.html
+;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html
+;; http://ergoemacs.org/emacs/emacs_delete_trailing_whitespace.html
+(setq whitespace-style (quote
+(face tabs trailing empty)))
+
+;;; editorconfig
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(load "editorconfig")
+(editorconfig-mode 1)
+
 ;;; evil
 (require 'evil)
 (evil-mode t)
@@ -33,6 +48,9 @@
 (require 'helm)
 (require 'helm-config)
 (helm-mode 1)
+
+;;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;;; projectile / projectile-helm
 (projectile-global-mode)
