@@ -31,6 +31,16 @@
 (setq whitespace-style (quote
 (face tabs trailing empty)))
 
+;; default tab width: 2
+(setq-default indent-tabs-mode nil)
+(setq tab-width 2)
+
+;; syntax highlighting: off
+(global-font-lock-mode 0)
+
+;; set default font: Hasklig
+(set-face-attribute 'default t :font "Hasklig" )
+
 ;;; editorconfig
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (load "editorconfig")

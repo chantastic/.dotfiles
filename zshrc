@@ -10,4 +10,4 @@ source ~/.aliases
 eval "$(~/code/pco/bin/pco init -)"
 
 # pco-box
-eval "$(pco box alias)"
+# eval "$(pco box alias)"
