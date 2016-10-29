@@ -9,5 +9,8 @@ source ~/.aliases
 # pco
 eval "$(~/code/pco/bin/pco init -)"
 
+# rbenv
+eval "$(rbenv init -)"
+
 # pco-box
 # eval "$(pco box alias)"
