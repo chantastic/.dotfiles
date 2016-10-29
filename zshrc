@@ -14,3 +14,5 @@ eval "$(rbenv init -)"
 
 # pco-box
 # eval "$(pco box alias)"
+
+export PATH="$HOME/.yarn/bin:$PATH"
