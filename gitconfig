@@ -38,3 +38,5 @@
 	ri = rebase -i
 
 	s = status -sb
+[push]
+	default = current
