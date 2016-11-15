@@ -40,3 +40,7 @@
 	s = status -sb
 [push]
 	default = current
+[fetch]
+        prune = true
+[rebase]
+        autosquash = true
