@@ -52,7 +52,7 @@
 (global-font-lock-mode 0)
 
 ;; set default font: Hasklig
-(set-face-attribute 'default t :font "Hasklig" )
+(set-face-attribute 'default nil :font "Hasklig" :height 160 )
 
 ;;; editorconfig
 (add-to-list 'load-path "~/.emacs.d/lisp")
