@@ -10,6 +10,12 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+;; Bootstrap `use-package'
+;; http://www.lunaryorn.com/posts/my-emacs-configuration-with-use-package.html
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 ;; custom.el
 (setq custom-file "~/.custom.el")
 (load custom-file)
@@ -34,6 +40,26 @@
 (require 'ac-emmet)
 (add-hook 'sgml-mode-hook 'ac-emmet-html-setup)
 (add-hook 'css-mode-hook 'ac-emmet-css-setup)
+
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
+;; flycheck
+(flycheck-add-mode 'javascript-eslint 'web-mode)
+(setq-default flycheck-temp-prefix ".flycheck")
+;; use local eslint from node_modules before global
+;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
+(defun my/use-eslint-from-node-modules ()
+  (let* ((root (locate-dominating-file
+                (or (buffer-file-name) default-directory)
+                "node_modules"))
+         (eslint (and root
+                      (expand-file-name "node_modules/eslint/bin/eslint.js"
+                                        root))))
+    (when (and eslint (file-executable-p eslint))
+      (setq-local flycheck-javascript-eslint-executable eslint))))
+(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 
 ;; backups: off
 ; http://stackoverflow.com/questions/151945/how-do-i-control-how-emacs-makes-backup-files#answer-151946
