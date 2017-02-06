@@ -14,6 +14,19 @@
 (setq custom-file "~/.custom.el")
 (load custom-file)
 
+;; web-mode.el
+;;; http://web-mode.org
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.slim\\'" . web-mode))
+(setq web-mode-attr-indent-offset 2)
+(eval-after-load "web-mode"
+  '(setq web-mode-enable-auto-expanding t))
+
 ;; backups: off
 ; http://stackoverflow.com/questions/151945/how-do-i-control-how-emacs-makes-backup-files#answer-151946
 (setq make-backup-files nil)
