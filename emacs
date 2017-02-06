@@ -85,6 +85,10 @@
 ;; syntax highlighting: off
 (global-font-lock-mode 0)
 
+;; twilight-bright-theme
+(use-package twilight-bright-theme
+  :ensure t)
+
 ;; set default font: Fira Code
 (set-face-attribute 'default nil :font "Fira Code" :height 160 )
 
