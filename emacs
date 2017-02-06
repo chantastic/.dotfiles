@@ -30,6 +30,11 @@
 ;; auto-complete
 (ac-config-default)
 
+;; ac-emmet
+(require 'ac-emmet)
+(add-hook 'sgml-mode-hook 'ac-emmet-html-setup)
+(add-hook 'css-mode-hook 'ac-emmet-css-setup)
+
 ;; backups: off
 ; http://stackoverflow.com/questions/151945/how-do-i-control-how-emacs-makes-backup-files#answer-151946
 (setq make-backup-files nil)
