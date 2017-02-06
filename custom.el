@@ -7,7 +7,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (web-mode elixir-mode magit editorconfig helm-ag helm-projectile projectile helm evil-surround evil)))
+    (auto-complete web-mode elixir-mode magit editorconfig helm-ag helm-projectile projectile helm evil-surround evil)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))

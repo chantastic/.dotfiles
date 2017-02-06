@@ -27,6 +27,9 @@
 (eval-after-load "web-mode"
   '(setq web-mode-enable-auto-expanding t))
 
+;; auto-complete
+(ac-config-default)
+
 ;; backups: off
 ; http://stackoverflow.com/questions/151945/how-do-i-control-how-emacs-makes-backup-files#answer-151946
 (setq make-backup-files nil)
