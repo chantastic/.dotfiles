@@ -1,0 +1,7 @@
+function npm() {
+  if [[ -e yarn.lock ]]; then
+    echo "Bro, do you even yarn?"
+  else
+    /usr/local/bin/npm $@
+  fi
+}
