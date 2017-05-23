@@ -7,7 +7,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (twilight-anti-bright-theme twilight-bright-theme flycheck ac-emmet emmet-mode auto-complete web-mode elixir-mode magit editorconfig helm-ag helm-projectile projectile helm evil-surround evil)))
+    (eslint-fix yaml-mode elixir-mode helm-projectile projectile helm-ag ag editorconfig flycheck markdown-mode js2-mode slim-mode dracula-theme magit evil-surround evil web-mode use-package)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
@@ -16,4 +16,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(web-mode-comment-face ((t (:inherit font-lock-comment-face :slant italic)))))
