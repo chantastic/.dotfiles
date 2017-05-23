@@ -1,3 +1,7 @@
+#
+# Executes commands at the start of an interactive session.
+#
+
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
@@ -16,3 +20,8 @@ eval "$(rbenv init -)"
 # eval "$(pco box alias)"
 
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
