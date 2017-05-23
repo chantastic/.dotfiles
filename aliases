@@ -17,40 +17,6 @@ alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
 
-# git
-alias gaa="g aa"
-alias gap="g ap"
-
-alias gb="g b"
-alias gbdm="g b -D $(g bm)"
-alias gbm="g bm"
-
-alias gc="g c"
-alias gca="g ca"
-alias gcm="g cm"
-
-alias gd="g d"
-alias gds="g ds"
-alias gdm="g dm"
-
-alias gg="g g"
-
-alias gl="g l"
-
-alias gp="g p"
-
-alias go="g o"
-
-alias gp="g p"
-alias gpf="g pf"
-
-alias gr="g r"
-alias grc="g rc"
-alias grs="g rs"
-alias gri="g ri"
-
-alias gs="g s"
-
 # PCO apps
 alias pca="cd ~/Code/accounts"
 alias pcapi="cd ~/Code/api"

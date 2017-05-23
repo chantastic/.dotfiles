@@ -42,6 +42,6 @@
 	default = current
 	followTags = true
 [fetch]
-        prune = true
+  prune = true
 [rebase]
-        autosquash = true
+  autosquash = true
