@@ -11,6 +11,15 @@ done
 source ~/.aliases
 
 # pco
+export PATH="$HOME/pco-box/bin:$PATH"
+function pco() {
+  if [[ "$1" == "box" ]]; then
+    shift
+    $HOME/pco-box/bin/box "$@"
+  else
+    command pco "$@"
+  fi
+}
 eval "$(~/code/pco/bin/pco init -)"
 
 # rbenv
