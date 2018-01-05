@@ -10,18 +10,6 @@ done
 # aliases
 source ~/.aliases
 
-# pco
-export PATH="$HOME/pco-box/bin:$PATH"
-function pco() {
-  if [[ "$1" == "box" ]]; then
-    shift
-    $HOME/pco-box/bin/box "$@"
-  else
-    command pco "$@"
-  fi
-}
-eval "$(~/code/pco/bin/pco init -)"
-
 # rbenv
 eval "$(rbenv init -)"
 
@@ -37,3 +25,10 @@ fi
 
 # git completion for alias
 compdef g=git
+
+# pco-box environment
+export RBENV_ROOT=$HOME/.rbenv
+export MYSQL_PORT_3306_TCP_ADDR=127.0.0.1
+export MYSQL_SLAVE_PORT_3306_TCP_ADDR=127.0.0.1
+export MYSQL_SLAVE_PORT_3306_TCP_PORT=3307
+export PATH=/Users/chan/pco-box/bin:/usr/local/bin:$PATH
