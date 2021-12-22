@@ -1,8 +1,6 @@
 # Unix
 alias ..="cd .."
 alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
 
 alias c="clear"
 
@@ -16,18 +14,3 @@ alias mkdir="mkdir -p"
 
 alias e="$EDITOR"
 alias v="$VISUAL"
-
-# PCO apps
-alias pca="cd ~/Code/accounts"
-alias pcapi="cd ~/Code/api"
-alias pcb="cd ~/pco-box"
-alias pcci="cd ~/Code/check-ins"
-alias pccc="cd ~/Code/church-center"
-alias pcgi="cd ~/Code/giving"
-alias pcgr="cd ~/Code/groups"
-alias pci="cd ~/Code/interfaces"
-alias pcii="cd ~/Code/interfaces_icons"
-alias pcp="cd ~/Code/people"
-alias pcrg="cd ~/Code/registrations"
-alias pcrs="cd ~/Code/resources"
-alias pcs="cd ~/Code/services"
