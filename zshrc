@@ -15,7 +15,7 @@ done
 source ~/.aliases
 
 # git completion for alias
-compdef g=git
+# compdef g=git
 
 #### FIG ENV VARIABLES ####
 # Please make sure this block is at the end of this file.
