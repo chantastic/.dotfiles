@@ -1,11 +1,3 @@
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
-#
-# Executes commands at the start of an interactive session.
-#
-
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
@@ -14,14 +6,15 @@ done
 # aliases
 source ~/.aliases
 
-# git completion for alias
-# compdef g=git
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+if type brew &>/dev/null; then
+  # Must be before compinit
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-# volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+  autoload -Uz compinit
+  compinit
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
+  # git completion for alias
+  # compdef must be after compinit
+  compdef g=git
+fi
