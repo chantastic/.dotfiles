@@ -1,6 +1,8 @@
-# determine incumbant package manager and run command with it
+# determine package manager and run command with it
 p() {
-  if [[ -f pnpm-lock.yaml ]]; then
+  if [[ -f bun.lockb ]]; then
+    command bun "$@"
+  elif [[ -f pnpm-lock.yaml ]]; then
     command pnpm "$@"
   elif [[ -f yarn.lock ]]; then
     command yarn "$@"
