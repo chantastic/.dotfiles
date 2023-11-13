@@ -17,6 +17,7 @@ EMAIL=mijoch@gmail.com
 
 BREW_TAPS=(
 	oven-sh/bun
+	tursodatabase/tap/turso
 )
 
 BREW_APPS=(
@@ -164,13 +165,19 @@ install_homebrew() {
 }
 
 install_brew_apps() {
-	# brew tap
-	brew tap ${BREW_TAPS[@]}
+	# brew ~~tap~~ install tapped apps
+	# brew tap ${BREW_TAPS[@]}
+	brew install ${BREW_TAPS[@]}
+
+	# install tap apps
+	echo "installing apps from taps..."
+	brew install ${BREW_TAP_APPS[@]}
 
 	# install apps
 	echo "installing apps..."
 	brew install ${BREW_APPS[@]}
 
+	# install cask apps
 	echo "installing apps with Cask..."
 	brew install --cask ${BREW_CASK_APPS[@]}
 
