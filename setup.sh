@@ -34,6 +34,7 @@ BREW_APPS=(
 
 BREW_CASK_APPS=(
 	visual-studio-code
+	arc
 )
 
 MAS_APPS=(
