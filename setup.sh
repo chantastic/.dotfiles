@@ -30,11 +30,14 @@ BREW_APPS=(
 	rcm # dotfile management
 	tmux
 	volta # Node.js manager
+	sqlite
 )
 
 BREW_CASK_APPS=(
 	visual-studio-code
 	arc
+	karabiner-elements
+	tableplus
 )
 
 MAS_APPS=(

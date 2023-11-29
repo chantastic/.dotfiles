@@ -18,3 +18,6 @@ if type brew &>/dev/null; then
   # compdef must be after compinit
   compdef g=git
 fi
+
+# PATH additions
+export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
