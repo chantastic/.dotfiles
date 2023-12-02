@@ -38,6 +38,7 @@ BREW_CASK_APPS=(
 	arc
 	karabiner-elements
 	tableplus
+	recut
 )
 
 MAS_APPS=(
