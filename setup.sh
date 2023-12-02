@@ -45,6 +45,9 @@ MAS_APPS=(
 	441258766  # Magnet
 	1365531024 # 1Blocker
 	1569813296 # 1Password for Safari
+	1616822987 # Affinity Photo 2
+	1616831348 # Affinity Designer 2
+	1606941598 # Affinity Publisher 2
 )
 
 set_macos_preferences() {
@@ -258,6 +261,7 @@ setup_sites
 
 # Enable Safari Addons
 # Launch magnet, give permissions, and enable at startup
+# Add Affinity licences
 
 # TAKE IT FURTHER
 #################
