@@ -23,6 +23,7 @@ BREW_APPS=(
 	"1password"
 	bun
 	dockutil # manage dock apps
+	flctl
 	git
 	gh  # GitHub CLI
 	mas # Search Mac App Store for ids
