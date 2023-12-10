@@ -50,6 +50,7 @@ MAS_APPS=(
 	1616822987 # Affinity Photo 2
 	1616831348 # Affinity Designer 2
 	1606941598 # Affinity Publisher 2
+	900392332  # DaVinci Resolve Studio
 )
 
 set_macos_preferences() {
