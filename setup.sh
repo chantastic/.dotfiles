@@ -24,9 +24,11 @@ BREW_APPS=(
 	"1password"
 	bun
 	dockutil # manage dock apps
+	elixir
 	flyctl
 	git
 	gh  # GitHub CLI
+	go
 	mas # Search Mac App Store for ids
 	neovim
 	rcm # dotfile management
@@ -38,6 +40,7 @@ BREW_APPS=(
 BREW_CASK_APPS=(
 	visual-studio-code
 	arc
+	cleanshot
 	karabiner-elements
 	tableplus
 	recut
@@ -271,6 +274,7 @@ setup_sites
 # Enable Safari Addons
 # Launch magnet, give permissions, and enable at startup
 # Add Affinity licences
+# Add licence for CleanShot X
 
 # TAKE IT FURTHER
 #################
