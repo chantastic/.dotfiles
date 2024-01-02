@@ -27,9 +27,10 @@ BREW_APPS=(
 	elixir
 	flyctl
 	git
-	gh  # GitHub CLI
+	gh # GitHub CLI
 	go
-	mas # Search Mac App Store for ids
+	imageoptim-cli # compress images
+	mas            # Search Mac App Store for ids
 	neovim
 	rcm # dotfile management
 	tmux
