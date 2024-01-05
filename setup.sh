@@ -21,7 +21,6 @@ BREW_TAPS=(
 )
 
 BREW_APPS=(
-	"1password"
 	bun
 	dockutil # manage dock apps
 	elixir
@@ -32,14 +31,14 @@ BREW_APPS=(
 	# imageoptim-cli # not m1 compatible
 	mas # Search Mac App Store for ids
 	neovim
-	"node@20"
-	pnpm
-	rcm # dotfile management
+	"node@20" # use pnpm via corepack
+	rcm       # dotfile management
 	tmux
 	sqlite
 )
 
 BREW_CASK_APPS=(
+	"1password"
 	visual-studio-code
 	arc
 	cleanshot
@@ -257,11 +256,25 @@ setup_sites() {
 	fi
 }
 
+setup_node_with_corepack() {
+	if ! command -v node >/dev/null 2>&1; then
+		echo "Install node first"
+		exit 1
+	else
+		corepack enable
+		# https://pnpm.io/installation#using-corepac
+		corepack prepare pnpm@latest --activate
+		corepack prepare yarn@stable --activate
+	fi
+}
+
 # EXECUTE ALL
 #############
 
 install_homebrew
 install_brew_apps
+
+setup_node
 
 setup_ssh
 log_into_github
