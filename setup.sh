@@ -16,7 +16,7 @@
 EMAIL=mijoch@gmail.com
 
 BREW_TAPS=(
-	oven-sh/bun
+	oven-sh/bun/bun
 	tursodatabase/tap/turso
 )
 
