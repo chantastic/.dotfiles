@@ -46,6 +46,7 @@ BREW_CASK_APPS=(
 	karabiner-elements
 	tableplus
 	recut
+	raycast
 )
 
 MAS_APPS=(
