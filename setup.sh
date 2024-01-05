@@ -29,12 +29,13 @@ BREW_APPS=(
 	git
 	gh # GitHub CLI
 	go
-	imageoptim-cli # compress images
-	mas            # Search Mac App Store for ids
+	# imageoptim-cli # not m1 compatible
+	mas # Search Mac App Store for ids
 	neovim
+	"node@20"
+	pnpm
 	rcm # dotfile management
 	tmux
-	volta # Node.js manager
 	sqlite
 )
 
@@ -244,15 +245,6 @@ setup_sites() {
 	fi
 }
 
-setup_node_with_volta() {
-	https://docs.volta.sh/guide/#features
-	volta install node@lts
-	volta install pnpm@latest
-
-	npm install -g npm@10.2.3
-	npm install --global typescript
-}
-
 # EXECUTE ALL
 #############
 
@@ -264,8 +256,6 @@ log_into_github
 
 set_macos_preferences
 install_mac_app_store_apps
-
-setup_node_with_volta
 
 setup_sites
 
