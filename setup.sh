@@ -274,7 +274,7 @@ setup_node_with_corepack() {
 install_homebrew
 install_brew_apps
 
-setup_node
+setup_node_with_corepack
 
 setup_ssh
 log_into_github
