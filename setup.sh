@@ -49,9 +49,10 @@ BREW_CASK_APPS=(
 )
 
 MAS_APPS=(
-	904280696  # Things 3
 	441258766  # Magnet
+	904280696  # Things 3
 	1365531024 # 1Blocker
+	1452453066 # Hidden Bar
 	1569813296 # 1Password for Safari
 	1616822987 # Affinity Photo 2
 	1616831348 # Affinity Designer 2
