@@ -32,7 +32,10 @@ BREW_APPS=(
 	mas # Search Mac App Store for ids
 	neovim
 	"node@20" # use pnpm via corepack
-	rcm       # dotfile management
+	pandoc
+	python
+	rcm # dotfile management
+	rust
 	tmux
 	sqlite
 )
