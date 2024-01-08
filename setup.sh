@@ -49,6 +49,7 @@ BREW_CASK_APPS=(
 	tableplus
 	recut
 	raycast
+	rode-connect
 )
 
 MAS_APPS=(
