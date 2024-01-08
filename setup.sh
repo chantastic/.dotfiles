@@ -279,10 +279,11 @@ setup_node_with_corepack() {
 install_homebrew
 install_brew_apps
 
-setup_node_with_corepack
-
 setup_ssh
 log_into_github
+
+setup_dotfiles
+setup_node_with_corepack
 
 set_macos_preferences
 install_mac_app_store_apps
