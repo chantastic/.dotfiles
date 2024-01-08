@@ -262,7 +262,7 @@ setup_sites() {
 }
 
 setup_node_with_corepack() {
-	source .zprofile
+	source ~/.zprofile
  
 	if ! command -v node >/dev/null 2>&1; then
 		echo "Install node first"
