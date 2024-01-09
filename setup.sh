@@ -45,6 +45,7 @@ BREW_CASK_APPS=(
 	visual-studio-code
 	arc
 	cleanshot
+ 	ecamm-live
 	karabiner-elements
 	tableplus
 	recut
