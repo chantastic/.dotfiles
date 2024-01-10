@@ -52,6 +52,7 @@ BREW_CASK_APPS=(
 	recut
 	raycast
 	# rode-connect # current version is busted
+	warp
 )
 
 MAS_APPS=(
