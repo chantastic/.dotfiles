@@ -77,9 +77,6 @@ set_macos_preferences() {
 	# list of plist commands
 	# https://macos-defaults.com
 
-	# Autohide the Dock when the mouse is out
-	defaults write com.apple.dock "autohide" -bool "true"
-
 	# Set the default view style for folders without custom setting: Column
 	defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv"
 
@@ -111,6 +108,13 @@ set_macos_preferences() {
 
 	# Do not display recent apps in the Dock
 	defaults write com.apple.dock "show-recents" -bool "true"
+
+	# Autohide the Dock when the mouse is out
+	defaults write com.apple.dock "autohide" -bool "true"
+
+	# Dock: Make it popup faster
+	defaults write com.apple.dock autohide-delay -float 0
+	defaults write com.apple.dock autohide-time-modifier -float 0
 
 	###############################################################################
 	# Time Machine                                                                #
