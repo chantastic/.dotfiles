@@ -155,6 +155,26 @@ set_macos_preferences() {
 	defaults write NSGlobalDomain com.apple.trackpad.scaling -int 2.5
 
 	###############################################################################
+	# Hot corners                                                                 #
+	###############################################################################
+	# Hot corners
+	# Possible values: 0 no-op; 2 Mission Control; 3 Show application windows;
+	# 4 Desktop; 5 Start screen saver; 6 Disable screen saver; 7 Dashboard;
+	# 10 Put display to sleep; 11 Launchpad; 12 Notification Center
+
+	# defaults write com.apple.dock wvous-tl-corner -int 3
+	# defaults write com.apple.dock wvous-tl-modifier -int 0
+
+	# defaults write com.apple.dock wvous-tr-corner -int 4
+	# defaults write com.apple.dock wvous-tr-modifier -int 0
+
+	# defaults write com.apple.dock wvous-bl-corner -int 2
+	# defaults write com.apple.dock wvous-bl-modifier -int 0
+
+	# defaults write com.apple.dock wvous-br-corner -int 5
+	# defaults write com.apple.dock wvous-br-modifier -int 0
+
+	###############################################################################
 	# Mac App Store                                                               #
 	###############################################################################
 
@@ -300,7 +320,9 @@ setup_node_with_corepack() {
 }
 
 setup_mac_dock() {
-	dockutil --remove all
+	dockutil --remove all >/dev/null 2>&1
+	# add an app like so:
+	# dockutil --add /System/Applications/Messages.app > /dev/null 2>&1
 }
 
 # EXECUTE ALL
