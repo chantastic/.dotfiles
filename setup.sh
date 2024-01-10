@@ -29,7 +29,8 @@ BREW_APPS=(
 	gh # GitHub CLI
 	go
 	# imageoptim-cli # not m1 compatible
-	mas # Search Mac App Store for ids
+	mas     # Search Mac App Store for ids
+	mysides # customize finder sidebar
 	neovim
 	"node@20" # use pnpm via corepack
 	pandoc
@@ -190,6 +191,35 @@ set_macos_preferences() {
 
 	# Install System data files & security updates
 	defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+
+	###############################################################################
+	# mysides (third party)													      #
+	###############################################################################
+	# Remove things I don't want
+	mysides remove Recents >/dev/null 2>&1
+	mysides remove Movies >/dev/null 2>&1
+	mysides remove Music >/dev/null 2>&1
+	mysides remove Pictures >/dev/null 2>&1
+
+	# Remove and append to maintain order
+	mysides remove chan >/dev/null 2>&1
+	mysides add chan file:///Users/chan/
+
+	mysides remove Documents >/dev/null 2>&1
+	mysides add Documents file:///Users/chan/Documents/
+
+	mysides remove Downloads >/dev/null 2>&1
+	mysides add Downloads file:///Users/chan/Downloads/
+
+	mysides remove Desktop >/dev/null 2>&1
+	mysides add Desktop file:///Users/chan/Desktop/
+
+	mysides remove Applications >/dev/null 2>&1
+	mysides add Applications file:///Applications/
+
+	###############################################################################
+	# Commit it!													      #
+	###############################################################################
 
 	killall Dock
 	killall Finder
@@ -356,9 +386,12 @@ setup_sites
 # Add licence for CleanShot X
 # - This time i did the "Replace default" option. We'll see if it sticks.
 # Install Davinc Resolve Studio and add license
+# Setup Finder preferences
+# -
 
 # REFERENCES
 ############
 
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # https://github.com/gricard/new-mac/blob/master/setup.sh
+# https://macowners.club/posts/sane-defaults-for-macos/
