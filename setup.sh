@@ -305,11 +305,8 @@ setup_sites
 # Launch magnet, give permissions, and enable at startup
 # Add Affinity licences
 # Add licence for CleanShot X
-
-# TAKE IT FURTHER
-#################
-
-# modify CAPS LOCK to CTRL
+# - This time i did the "Replace default" option. We'll see if it sticks.
+# Install Davinc Resolve Studio and add license
 
 # REFERENCES
 ############
