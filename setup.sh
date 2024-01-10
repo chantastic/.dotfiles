@@ -92,6 +92,20 @@ set_macos_preferences() {
 	# Keep folders on top when sorting
 	defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true"
 
+	# Show path bar and status bar
+	defaults write com.apple.finder ShowStatusBar -bool true
+	defaults write com.apple.finder ShowPathbar -bool true
+
+	# Items to display on the desktop
+	defaults write com.apple.finder ShowHardDrivesOnDesktop -int 0
+	defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -int 1
+	defaults write com.apple.finder ShowRemovableMediaOnDesktop -int 1
+	defaults write com.apple.finder ShowMountedServersOnDesktop -int 0
+
+	# Open home in new window
+	defaults write com.apple.finder NewWindowTarget -string "PfLo"
+	defaults write com.apple.finder NewWindowTargetPath -string "'file://$HOME/"
+
 	# Enable dragging with three finger drag
 	defaults write com.apple.AppleMultitouchTrackpad "TrackpadThreeFingerDrag" -bool "true"
 
