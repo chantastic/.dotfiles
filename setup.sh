@@ -263,6 +263,15 @@ setup_sites() {
 }
 
 setup_node_with_corepack() {
+	if ! command -v node >/dev/null 2>&1; then
+		echo "Attempting to source node…"
+		(
+			echo
+			echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
+		) >>~/.zprofile
+		eval "$(/opt/homebrew/bin/brew shellenv)"
+	fi
+
 	source ~/.zprofile
 
 	if ! command -v node >/dev/null 2>&1; then
