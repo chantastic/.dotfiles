@@ -45,7 +45,7 @@ BREW_CASK_APPS=(
 	visual-studio-code
 	arc
 	cleanshot
- 	ecamm-live
+	ecamm-live
 	karabiner-elements
 	tableplus
 	recut
@@ -264,7 +264,7 @@ setup_sites() {
 
 setup_node_with_corepack() {
 	source ~/.zprofile
- 
+
 	if ! command -v node >/dev/null 2>&1; then
 		echo "Install node first"
 		exit 1
@@ -274,6 +274,10 @@ setup_node_with_corepack() {
 		corepack prepare pnpm@latest --activate
 		corepack prepare yarn@stable --activate
 	fi
+}
+
+setup_mac_dock() {
+	dockutil --remove all
 }
 
 # EXECUTE ALL
@@ -288,6 +292,7 @@ log_into_github
 setup_dotfiles
 setup_node_with_corepack
 
+setup_mac_dock
 set_macos_preferences
 install_mac_app_store_apps
 
@@ -305,7 +310,6 @@ setup_sites
 #################
 
 # modify CAPS LOCK to CTRL
-# Use dockutils to cleanup dock (had trouble because python recip is not linking)
 
 # REFERENCES
 ############
