@@ -39,6 +39,7 @@ BREW_APPS=(
 	rust
 	tmux
 	sqlite
+	openai-whisper
 )
 
 BREW_CASK_APPS=(
