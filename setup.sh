@@ -362,6 +362,7 @@ setup_mac_dock() {
 }
 
 add_macos_login_items() {
+	# https://apple.stackexchange.com/a/310502
 	osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Things3.app", hidden:false}'
 }
 
