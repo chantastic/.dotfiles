@@ -361,6 +361,10 @@ setup_mac_dock() {
 	# dockutil --add /System/Applications/Messages.app > /dev/null 2>&1
 }
 
+add_macos_login_items() {
+	osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Things3.app", hidden:false}'
+}
+
 # EXECUTE ALL
 #############
 
@@ -376,6 +380,7 @@ setup_node_with_corepack
 setup_mac_dock
 set_macos_preferences
 install_mac_app_store_apps
+add_macos_login_items
 
 setup_sites
 
