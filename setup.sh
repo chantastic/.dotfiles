@@ -389,7 +389,10 @@ setup_sites
 # - This time i did the "Replace default" option. We'll see if it sticks.
 # Install Davinc Resolve Studio and add license
 # Setup Finder preferences
-# -
+# Keyboard shortcuts
+# - Keyboard > Input Sources: uncheck all.
+# - Keyboard > Press 🌐 key to: select `Change Input Source`
+# - Unregister `⌘^Space` (https://www.reddit.com/r/MacOS/comments/15j3pza/comment/juxx8ib/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 
 # REFERENCES
 ############
