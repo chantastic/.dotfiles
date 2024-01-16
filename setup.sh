@@ -37,6 +37,7 @@ BREW_APPS=(
 	python
 	rcm # dotfile management
 	rust
+	swiftdefaultappsprefpane # pref. pane to see available url schemas
 	tmux
 	sqlite
 	openai-whisper
