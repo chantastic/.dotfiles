@@ -68,6 +68,12 @@ MAS_APPS=(
 	1606941598 # Affinity Publisher 2
 )
 
+PNPM_GLOBAL_APPS=(
+	netlify-cli
+	typescript
+	storybook
+)
+
 set_macos_preferences() {
 	echo "Setting up mac"
 
@@ -353,6 +359,17 @@ setup_node_with_corepack() {
 		# https://pnpm.io/installation#using-corepac
 		corepack prepare pnpm@latest --activate
 		corepack prepare yarn@stable --activate
+
+		# install other globals
+		for i in $PNPM_GLOBAL_APPS; do
+			pnpm outdated -g $i &>/dev/null
+			if [ $? -eq 0 ]; then
+				echo "Skipping $i. Already up to date"
+			else
+				pnpm install -g $i@latest
+			fi
+		done
+
 	fi
 }
 
@@ -370,21 +387,21 @@ add_macos_login_items() {
 # EXECUTE ALL
 #############
 
-install_homebrew
-install_brew_apps
+# install_homebrew
+# install_brew_apps
 
-setup_ssh
-log_into_github
+# setup_ssh
+# log_into_github
 
-setup_dotfiles
+# setup_dotfiles
 setup_node_with_corepack
 
-setup_mac_dock
-set_macos_preferences
-install_mac_app_store_apps
-add_macos_login_items
+# setup_mac_dock
+# set_macos_preferences
+# install_mac_app_store_apps
+# add_macos_login_items
 
-setup_sites
+# setup_sites
 
 # MANUAL FOLLOW-UPS
 ###################
