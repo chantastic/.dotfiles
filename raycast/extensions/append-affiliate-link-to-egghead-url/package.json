@@ -12,7 +12,7 @@
   "commands": [
     {
       "name": "index",
-      "title": "Run Script",
+      "title": "Append egghead.io affiliate param",
       "description": "Template for running a script without any view",
       "mode": "no-view"
     }
