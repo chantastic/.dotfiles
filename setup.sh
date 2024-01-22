@@ -387,39 +387,54 @@ add_macos_login_items() {
 # EXECUTE ALL
 #############
 
-# install_homebrew
-# install_brew_apps
+install_homebrew
+install_brew_apps
 
-# setup_ssh
-# log_into_github
+setup_ssh
+log_into_github
 
-# setup_dotfiles
+setup_dotfiles
 setup_node_with_corepack
 
-# setup_mac_dock
-# set_macos_preferences
-# install_mac_app_store_apps
-# add_macos_login_items
+setup_mac_dock
+set_macos_preferences
+install_mac_app_store_apps
+add_macos_login_items
 
-# setup_sites
+setup_sites
 
 # MANUAL FOLLOW-UPS
 ###################
 
-# Enable Safari Addons
-# Launch magnet, give permissions, and enable at startup
-# Add Affinity licences
-# Add licence for CleanShot X
-# - This time i did the "Replace default" option. We'll see if it sticks.
-# Install Davinc Resolve Studio and add license
+# Launch Safari. Enable extensions.
+# Launch magnet. Give permissions and enable at startup.
+# Launch one Affinity Product. Apply license.
+# Launch CleanShot. Give permissions and enable at startup.
+# Launch Raycast. Login. Change default command to CMD+Space.
+#
+# System Settings
+# > Keyboard > Shortcuts > Input Sources > Disabled All [frees up Things quick input]
+# > Keyboard > Screenshots > Disable All [frees up Cleanshot]. Then set Cleanshot shortcuts in Cleanshot preferences.
+#
+# Install Davinc Resolve Studio. Add license
 # Setup Finder preferences
-# Keyboard shortcuts
-# - Keyboard > Input Sources: uncheck all.
-# - Keyboard > Press 🌐 key to: select `Change Input Source`
-# - Unregister `⌘^Space` (https://www.reddit.com/r/MacOS/comments/15j3pza/comment/juxx8ib/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+# Keyboard shortcuts >
+# - Keyboard > Press 🌐 key to: select `Change Input Source`.
+# - Unregister `⌘^Space` (https://www.reddit.com/r/MacOS/comments/15j3pza/comment/juxx8ib/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button).
+#   - Register to ^⌥⌘Space so still available.
+#   - Add keyboard system keyboard shortcut to Raycast alias (if not coming from shared settings).
+# Privacy >
+# - Screen & System Audio Recording >
+#   - Enable CleanShot X
+
+# Move 1Password shortcuts around `/`
+# - Show Quick Access: ⌘ shift \
+# - Autofill: ^ shift \
+# - ⌘\ should be open in new view, VS Code
 
 # REFERENCES
 ############
+
 
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # https://github.com/gricard/new-mac/blob/master/setup.sh
