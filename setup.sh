@@ -59,14 +59,15 @@ BREW_CASK_APPS=(
 )
 
 MAS_APPS=(
-	441258766  # Magnet
-	904280696  # Things 3
-	1365531024 # 1Blocker
-	1452453066 # Hidden Bar
-	1569813296 # 1Password for Safari
-	1616822987 # Affinity Photo 2
-	1616831348 # Affinity Designer 2
-	1606941598 # Affinity Publisher 2
+	-2143728525 # Klack
+	441258766   # Magnet
+	904280696   # Things 3
+	1365531024  # 1Blocker
+	1452453066  # Hidden Bar
+	1569813296  # 1Password for Safari
+	1616822987  # Affinity Photo 2
+	1616831348  # Affinity Designer 2
+	1606941598  # Affinity Publisher 2
 )
 
 PNPM_GLOBAL_APPS=(
@@ -412,6 +413,7 @@ setup_sites
 # Launch one Affinity Product. Apply license.
 # Launch CleanShot. Give permissions and enable at startup.
 # Launch Raycast. Login. Change default command to CMD+Space.
+# Launch Obsidian. Settings > General > Commercial License > Activate
 #
 # System Settings
 # > Keyboard > Shortcuts > Input Sources > Disabled All [frees up Things quick input]
