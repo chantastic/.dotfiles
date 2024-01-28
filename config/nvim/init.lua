@@ -11,6 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- https://vim.fandom.com/wiki/Increasing_or_decreasing_numbers#Number_formats
+vim.opt.nrformats:append('alpha')
+
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
@@ -31,3 +34,6 @@ if vim.g.vscode then
 else
     -- ordinary Neovim
 end
+
+-- references:
+-- * https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/
