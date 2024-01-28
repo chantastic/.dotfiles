@@ -50,6 +50,7 @@ BREW_CASK_APPS=(
 	cleanshot
 	ecamm-live
 	karabiner-elements
+	obsidian
 	tableplus
 	recut
 	raycast
@@ -434,7 +435,6 @@ setup_sites
 
 # REFERENCES
 ############
-
 
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # https://github.com/gricard/new-mac/blob/master/setup.sh
