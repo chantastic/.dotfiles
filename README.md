@@ -9,3 +9,7 @@
 - `brew install rcm`
 - Clone this repo into `/.dotfiles`
 - `rcup -v -d ~/.dotfiles`
+
+## Other resources
+
+- https://osxdaily.com/2017/08/08/create-custom-keyboard-shortcut-mac/
