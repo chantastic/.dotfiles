@@ -21,7 +21,8 @@ BREW_TAPS=(
 )
 
 BREW_APPS=(
-	bun
+    "1password-cli"
+    bun
 	dockutil # manage dock apps
 	elixir
 	flyctl
@@ -29,6 +30,7 @@ BREW_APPS=(
 	gh # GitHub CLI
 	go
 	# imageoptim-cli # not m1 compatible
+	jakehilborn/jakehilborn/displayplacer
 	mas     # Search Mac App Store for ids
 	mysides # customize finder sidebar
 	neovim
@@ -38,6 +40,7 @@ BREW_APPS=(
 	rcm # dotfile management
 	rust
 	swiftdefaultappsprefpane # pref. pane to see available url schemas
+	tldr
 	tmux
 	sqlite
 	openai-whisper
@@ -52,8 +55,9 @@ BREW_CASK_APPS=(
 	karabiner-elements
 	obsidian
 	tableplus
-	recut
 	raycast
+	recut
+	rode-central
 	# rode-connect # current version is busted
 	warp
 )
