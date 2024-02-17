@@ -40,7 +40,10 @@
 	rs = rebase --skip
 	ri = rebase -i
 
-	s = status -sb
+	s = status
+[status]
+	short = true
+	branch = true
 [push]
 	default = current
 	followTags = true
