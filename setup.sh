@@ -394,21 +394,21 @@ add_macos_login_items() {
 # EXECUTE ALL
 #############
 
-# install_homebrew
-# install_brew_apps
+install_homebrew
+install_brew_apps
 
-# setup_ssh
-# log_into_github
+setup_ssh
+log_into_github
 
-# setup_dotfiles
+setup_dotfiles
 setup_node_with_corepack
 
-# setup_mac_dock
-# set_macos_preferences
-# install_mac_app_store_apps
-# add_macos_login_items
+setup_mac_dock
+set_macos_preferences
+install_mac_app_store_apps
+add_macos_login_items
 
-# setup_sites
+setup_sites
 
 # MANUAL FOLLOW-UPS
 ###################
