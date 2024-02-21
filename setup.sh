@@ -53,6 +53,7 @@ BREW_CASK_APPS=(
 	cleanshot
 	ecamm-live
 	karabiner-elements
+	obs
 	obsidian
 	tableplus
 	raycast
