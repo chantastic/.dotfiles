@@ -52,6 +52,7 @@ BREW_CASK_APPS=(
 	arc
 	cleanshot
 	ecamm-live
+	iterm2
 	karabiner-elements
 	obs
 	obsidian

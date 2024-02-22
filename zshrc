@@ -30,4 +30,4 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-export PS1="$ "
+export PS1="%2~ > "
