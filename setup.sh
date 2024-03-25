@@ -54,6 +54,7 @@ BREW_CASK_APPS=(
 	ecamm-live
 	iterm2
 	karabiner-elements
+	keyboard-maestro
 	obs
 	obsidian
 	tableplus
