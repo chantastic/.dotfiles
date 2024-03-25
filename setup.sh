@@ -21,6 +21,7 @@ BREW_TAPS=(
 )
 
 BREW_APPS=(
+	atuin # better history, maybe
 	"1password-cli"
 	bun
 	dockutil # manage dock apps
