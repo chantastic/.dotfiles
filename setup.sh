@@ -21,31 +21,32 @@ BREW_TAPS=(
 )
 
 BREW_APPS=(
-	atuin # better history, maybe
 	"1password-cli"
-	zoxide
+	atuin # better history, maybe
 	bun
+	corepack
 	dockutil # manage dock apps
 	elixir
 	flyctl
-	git
 	gh # GitHub CLI
+	git
 	go
 	# imageoptim-cli # not m1 compatible
 	jakehilborn/jakehilborn/displayplacer
 	mas     # Search Mac App Store for ids
 	mysides # customize finder sidebar
 	neovim
-	"node@20" # use pnpm via corepack
+	"node@22" # use pnpm via corepack
+	openai-whisper
 	pandoc
 	python
 	rcm # dotfile management
 	rust
 	swiftdefaultappsprefpane # pref. pane to see available url schemas
+	sqlite
 	tldr
 	tmux
-	sqlite
-	openai-whisper
+	zoxide
 )
 
 BREW_CASK_APPS=(
@@ -80,9 +81,7 @@ MAS_APPS=(
 )
 
 PNPM_GLOBAL_APPS=(
-	netlify-cli
 	typescript
-	storybook
 	wrangler
 )
 
