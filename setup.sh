@@ -46,6 +46,7 @@ BREW_APPS=(
 	sqlite
 	tldr
 	tmux
+	yqrashawn/goku/goku
 	zoxide
 )
 
