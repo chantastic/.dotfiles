@@ -46,7 +46,7 @@ BREW_APPS=(
 	sqlite
 	tldr
 	tmux
-	yqrashawn/goku/goku
+	"yqrashawn/goku/goku"
 	zoxide
 )
 
