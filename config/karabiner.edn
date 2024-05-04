@@ -1,6 +1,7 @@
-{:simlayers {:period-mode {:key :period},
-             :launch-mode {:key :a},
-             :open-mode {:key :o},
+{:simlayers {:period-mode {:key :period}
+             :launch-mode {:key :a}
+             :open-mode {:key :o}
+             :locate-mode {:key :l}
              :display-mode {:key :d}}
 
  :templates {:launch "osascript -e 'tell application \"%s\" to activate'",
@@ -17,13 +18,24 @@
                  [:m [:launch "Messages"]]
                  [:n [:launch "Notes"]]
                  [:t [:launch "Terminal"]]
-                 [:s [:launch "Ecamm Live"]]]},
+                 [:s [:launch "Ecamm Live"]]]}
 
         {:des "open mode"
          :rules [:open-mode
                  [:c [:open "~/sites/chan.dev -a 'Visual Studio Code'"]]
                  [:d [:open "~/.dotfiles/chan.dev -a 'Visual Studio Code'"]]
                  [:s [:open "~/sites -a 'Visual Studio Code'"]]]}
+
+        {:des "locate mode"
+         :rules [:locate-mode
+                 [:1 [:open "http://localhost:1234"]]
+                 [:3 [:open "http://localhost:3000"]]
+                 [:4 [:open "http://localhost:4321"]]
+                 [:6 [:open "http://localhost:6006"]]
+                 [:7 [:open "http://localhost:7890"]]
+                 [:8 [:open "http://localhost:8080"]]
+                 [:9 [:open "http://localhost:9000"]]
+                 ]}
 
         {:des "display mode"
          :rules [:display-mode
