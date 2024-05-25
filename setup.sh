@@ -15,60 +15,6 @@
 ###########
 EMAIL=mijoch@gmail.com
 
-BREW_TAPS=(
-	oven-sh/bun/bun
-	tursodatabase/tap/turso
-)
-
-BREW_APPS=(
-	"1password-cli"
-	atuin # better history, maybe
-	bun
-	corepack
-	dockutil # manage dock apps
-	elixir
-	flyctl
-	gh # GitHub CLI
-	git
-	go
-	# imageoptim-cli # not m1 compatible
-	jakehilborn/jakehilborn/displayplacer
-	mas     # Search Mac App Store for ids
-	mysides # customize finder sidebar
-	neovim
-	"node@22" # use pnpm via corepack
-	openai-whisper
-	pandoc
-	python
-	rcm # dotfile management
-	rust
-	swiftdefaultappsprefpane # pref. pane to see available url schemas
-	sqlite
-	tldr
-	tmux
-	"yqrashawn/goku/goku"
-	zoxide
-)
-
-BREW_CASK_APPS=(
-	"1password"
-	visual-studio-code
-	arc
-	cleanshot
-	ecamm-live
-	iterm2
-	karabiner-elements
-	keyboard-maestro
-	obs
-	obsidian
-	tableplus
-	raycast
-	recut
-	rode-central
-	# rode-connect # current version is busted
-	warp
-)
-
 MAS_APPS=(
 	# "-2143728525" # Klack, not sure why i'm getting an invalid negative id here
 	441258766  # Magnet
@@ -264,31 +210,6 @@ install_homebrew() {
 	fi
 }
 
-install_brew_apps() {
-	# brew ~~tap~~ install tapped apps
-	# brew tap ${BREW_TAPS[@]}
-	brew install ${BREW_TAPS[@]}
-
-	# install tap apps
-	echo "installing apps from taps..."
-	brew install ${BREW_TAP_APPS[@]}
-
-	# install apps
-	echo "installing apps..."
-	brew install ${BREW_APPS[@]}
-
-	# install cask apps
-	echo "installing apps with Cask..."
-	brew install --cask ${BREW_CASK_APPS[@]}
-
-	brew cleanup
-
-	eval "$(/opt/homebrew/bin/brew shellenv)"
-}
-
-# (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/chan/.zprofile
-# eval "$(/opt/homebrew/bin/brew shellenv)"
-
 log_into_github() {
 	# https://cli.github.com/manual/gh_auth_login
 	# logging in will automatically prompt to add ssh keys
@@ -400,7 +321,7 @@ add_macos_login_items() {
 #############
 
 install_homebrew
-install_brew_apps
+brew bundle --file="~/.Brewfile"
 
 setup_ssh
 log_into_github
