@@ -4,7 +4,7 @@
 ##############
 
 ## RUN REMOTELY
-# /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/chantastic/dotfiles/master/setup.sh)"
+# /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/chantastic/.dotfiles/master/setup.sh)"
 
 # MAKE SCRIPT EXECUTABLE
 # https://linuxopsys.com/topics/make-bash-script-executable-using-chmod
