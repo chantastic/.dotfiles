@@ -31,23 +31,6 @@ install_homebrew() {
 	fi
 }
 
-log_into_github() {
-	# https://cli.github.com/manual/gh_auth_login
-	# logging in will automatically prompt to add ssh keys
-	# https://stackoverflow.com/a/73465507
-	if ! command -v gh >/dev/null 2>&1; then
-		echo "Install gh first"
-		exit 1
-	fi
-
-	if ! gh auth status >/dev/null 2>&1; then
-		gh auth login -p ssh -w
-	else
-		echo "Logged into GitHub. Skipping..."
-	fi
-
-}
-
 setup_dotfiles() {
 	if [ -d ~/.dotfiles ]; then
 		echo "dotfiles installed at path ~/.dotfiles"
@@ -114,7 +97,7 @@ install_homebrew
 brew bundle --file="~/.Brewfile"
 
 . ~/.dotfiles/scripts/setup_ssh.sh
-log_into_github
+. ~/.dotfiles/scripts/setup_gh.sh
 
 setup_dotfiles
 setup_node_with_corepack
