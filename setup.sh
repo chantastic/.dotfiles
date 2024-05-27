@@ -31,26 +31,6 @@ install_homebrew() {
 	fi
 }
 
-setup_dotfiles() {
-	if [ -d ~/.dotfiles ]; then
-		echo "dotfiles installed at path ~/.dotfiles"
-	else
-		echo "installing dotfiles"
-		git clone git@github.com:chantastic/dotfiles.git ~/.dotfiles
-	fi
-
-	rcup -v -d ~/.dotfiles
-}
-
-setup_sites() {
-	if [ -d ~/sites ]; then
-		echo "sites installed at path ~/sites"
-	else
-		echo "installing sites"
-		git clone git@github.com:chantastic/sites.git ~/sites
-	fi
-}
-
 setup_node_with_corepack() {
 	if ! command -v node >/dev/null 2>&1; then
 		echo "Attempting to source node…"
@@ -99,15 +79,13 @@ brew bundle --file="~/.Brewfile"
 . ~/.dotfiles/scripts/setup_ssh.sh
 . ~/.dotfiles/scripts/setup_gh.sh
 
-setup_dotfiles
+. ~/.dotfiles/scripts/setup_gh.sh
 setup_node_with_corepack
 
 . ~/.dotfiles/scripts/set_macos_dock.sh
 . ~/.dotfiles/scripts/set_macos_preferences.sh
 . ~/.dotfiles/scripts/install_mas_apps.sh
 add_macos_login_items
-
-setup_sites
 
 # MANUAL FOLLOW-UPS
 ###################
