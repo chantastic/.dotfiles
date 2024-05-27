@@ -169,7 +169,7 @@ log_into_github
 setup_dotfiles
 setup_node_with_corepack
 
-setup_mac_dock
+. ~/.dotfiles/scripts/set_macos_dock.sh
 . ~/.dotfiles/scripts/set_macos_preferences.sh
 install_mac_app_store_apps
 add_macos_login_items
