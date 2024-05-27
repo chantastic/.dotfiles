@@ -20,17 +20,6 @@ PNPM_GLOBAL_APPS=(
 	wrangler
 )
 
-install_homebrew() {
-	which -s brew
-	if [[ $? != 0 ]]; then
-		echo "Installing homebrew..."
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	else
-		echo "Updating brew..."
-		brew upgrade
-	fi
-}
-
 setup_node_with_corepack() {
 	if ! command -v node >/dev/null 2>&1; then
 		echo "Attempting to source node…"
@@ -73,7 +62,7 @@ add_macos_login_items() {
 # EXECUTE ALL
 #############
 
-install_homebrew
+. ~/.dotfiles/scripts/install_or_update_homebrew.sh
 brew bundle --file="~/.Brewfile"
 
 . ~/.dotfiles/scripts/setup_ssh.sh
