@@ -32,7 +32,9 @@ brew bundle --file="~/.Brewfile"
 
 . ~/.dotfiles/scripts/set_macos_dock.sh
 . ~/.dotfiles/scripts/set_macos_preferences.sh
-. ~/.dotfiles/scripts/install_mas_apps.sh
+if [[ $MACHINE != "work" ]]; then
+	. ~/.dotfiles/scripts/install_mas_apps.sh
+fi
 add_macos_login_items
 
 # MANUAL FOLLOW-UPS
