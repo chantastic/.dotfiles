@@ -13,11 +13,6 @@
 
 EMAIL=mijoch@gmail.com
 
-add_macos_login_items() {
-	# https://apple.stackexchange.com/a/310502
-	osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Things3.app", hidden:false}'
-}
-
 # EXECUTE ALL
 #############
 
@@ -35,7 +30,7 @@ brew bundle --file="~/.Brewfile"
 if [[ $MACHINE != "work" ]]; then
 	. ~/.dotfiles/scripts/install_mas_apps.sh
 fi
-add_macos_login_items
+. ~/.dotfiles/scripts/configure_macos_login_items.sh
 
 # MANUAL FOLLOW-UPS
 ###################
