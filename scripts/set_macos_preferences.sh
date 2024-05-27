@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-echo "Setting macOS preferences"
+echo "Setting macOS preferences…"
 
 # change keyboard to dvorak at system login level
 # https://vkritis.blogspot.com/2014/01/change-default-keyboard-of-osx-login.html

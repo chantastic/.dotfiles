@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-echo "Setting macOS dock"
+echo "Setting macOS dock…"
 
 dockutil --remove all >/dev/null 2>&1
 
