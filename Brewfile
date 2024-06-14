@@ -36,6 +36,7 @@ brew "tldr"
 brew "tmux"
 brew "yqrashawn/goku/goku"
 brew "zoxide"
+cask "arc" # if [[ $MACHINE == "work" ]]
 cask "font-inter"
 cask "font-poppins"
 cask "font-sf-mono"
