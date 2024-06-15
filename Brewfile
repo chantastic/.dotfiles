@@ -36,7 +36,9 @@ brew "tldr"
 brew "tmux"
 brew "yqrashawn/goku/goku"
 brew "zoxide"
-cask "arc" # if [[ $MACHINE == "work" ]]
+cask "1password" unless [ $MACHINE == "work" ]
+cask "arc"
+cask "cleanshot" unless [ $MACHINE == "work" ]
 cask "font-inter"
 cask "font-poppins"
 cask "font-sf-mono"
