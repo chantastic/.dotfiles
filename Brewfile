@@ -23,7 +23,7 @@ brew "git"
 brew "go"
 brew "jakehilborn/jakehilborn/displayplacer"
 brew "neovim"
-brew "node@18" if [ $MACHINE == "work" ]
+brew "node@20" if [ $MACHINE == "work" ]
 brew "node"
 brew "openai-whisper"
 brew "whisper-cpp"
