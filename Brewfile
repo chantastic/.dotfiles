@@ -39,6 +39,7 @@ brew "yqrashawn/goku/goku"
 brew "zoxide"
 cask "1password" unless [ $MACHINE == "work" ]
 cask "arc"
+cask "alacritty"
 cask "cleanshot" unless [ $MACHINE == "work" ]
 cask "font-inter"
 cask "font-poppins"
