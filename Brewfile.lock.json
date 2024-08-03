@@ -2009,6 +2009,12 @@
         "options": {
           "full_name": "obsidian"
         }
+      },
+      "slack": {
+        "version": "4.39.95",
+        "options": {
+          "full_name": "slack"
+        }
       }
     }
   },
