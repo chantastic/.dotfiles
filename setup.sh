@@ -27,9 +27,6 @@ brew bundle --file="~/.Brewfile"
 
 . ~/.dotfiles/scripts/set_macos_dock.sh
 . ~/.dotfiles/scripts/set_macos_preferences.sh
-if [[ $MACHINE != "work" ]]; then
-	. ~/.dotfiles/scripts/install_mas_apps.sh
-fi
 . ~/.dotfiles/scripts/configure_macos_login_items.sh
 
 # MANUAL FOLLOW-UPS
